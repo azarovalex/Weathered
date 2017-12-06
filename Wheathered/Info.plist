@@ -24,9 +24,13 @@
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017 Alex Azarov. All rights reserved.</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>LSUIElement</key>
+	<true/>
 </dict>
 </plist>
