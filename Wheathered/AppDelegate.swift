@@ -17,12 +17,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         statusitem.button?.title =  "--°"
+        statusitem.action = #selector(AppDelegate.displayPopUp(_:))
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
 
-    
+    func displayPopUp(_ sender: AnyObject?) {
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateController(withIdentifier: "WheatherVC")
+            as? NSViewController else { return }
+        let popoverView = NSPopover()
+        popoverView.contentViewController = vc
+        popoverView.behavior = .transient
+        popoverView.show(relativeTo: statusitem.button!.bounds, of: statusitem.button!, preferredEdge: .minY)
+    }
 }
 

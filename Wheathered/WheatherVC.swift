@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WheatherVC.swift
 //  Wheathered
 //
 //  Created by Alex Azarov on 07/12/2017.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class WheatherVC: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
