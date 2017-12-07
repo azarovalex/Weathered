@@ -26,12 +26,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func displayPopUp(_ sender: AnyObject?) {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateController(withIdentifier: "WheatherVC")
-            as? NSViewController else { return }
+        guard let vc = storyboard.instantiateController(withIdentifier: "WheatherVC") as? NSViewController else { return }
         let popoverView = NSPopover()
         popoverView.contentViewController = vc
         popoverView.behavior = .transient
-        popoverView.show(relativeTo: statusitem.button!.bounds, of: statusitem.button!, preferredEdge: .minY)
+        popoverView.show(relativeTo: statusitem.button!.bounds, of: statusitem.button!, preferredEdge: .maxY)
     }
 }
 

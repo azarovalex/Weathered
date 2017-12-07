@@ -11,6 +11,8 @@
 		DF29E84B1FD8938800C581B4 /* WheatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29E84A1FD8938800C581B4 /* WheatherVC.swift */; };
 		DF29E84D1FD8938800C581B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF29E84C1FD8938800C581B4 /* Assets.xcassets */; };
 		DF29E8501FD8938800C581B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF29E84E1FD8938800C581B4 /* Main.storyboard */; };
+		DFC6540B1FD9EC8100282BE4 /* WheatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC6540A1FD9EC8100282BE4 /* WheatherCell.xib */; };
+		DFC6540D1FD9ECC800282BE4 /* WheatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6540C1FD9ECC800282BE4 /* WheatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		DF29E84F1FD8938800C581B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF29E8511FD8938800C581B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF29E8521FD8938800C581B4 /* Wheathered.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wheathered.entitlements; sourceTree = "<group>"; };
+		DFC6540A1FD9EC8100282BE4 /* WheatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WheatherCell.xib; sourceTree = "<group>"; };
+		DFC6540C1FD9ECC800282BE4 /* WheatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +57,48 @@
 		DF29E8471FD8938800C581B4 /* Wheathered */ = {
 			isa = PBXGroup;
 			children = (
+				DFC654061FD9EBFD00282BE4 /* Model */,
+				DFC654071FD9EC0900282BE4 /* View */,
+				DFC654081FD9EC1800282BE4 /* Controller */,
+				DFC654091FD9EC4800282BE4 /* Xibs */,
 				DF29E8481FD8938800C581B4 /* AppDelegate.swift */,
-				DF29E84A1FD8938800C581B4 /* WheatherVC.swift */,
 				DF29E84C1FD8938800C581B4 /* Assets.xcassets */,
 				DF29E84E1FD8938800C581B4 /* Main.storyboard */,
 				DF29E8511FD8938800C581B4 /* Info.plist */,
 				DF29E8521FD8938800C581B4 /* Wheathered.entitlements */,
 			);
 			path = Wheathered;
+			sourceTree = "<group>";
+		};
+		DFC654061FD9EBFD00282BE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DFC654071FD9EC0900282BE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DFC6540C1FD9ECC800282BE4 /* WheatherCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DFC654081FD9EC1800282BE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF29E84A1FD8938800C581B4 /* WheatherVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFC654091FD9EC4800282BE4 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				DFC6540A1FD9EC8100282BE4 /* WheatherCell.xib */,
+			);
+			path = Xibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF29E84D1FD8938800C581B4 /* Assets.xcassets in Resources */,
+				DFC6540B1FD9EC8100282BE4 /* WheatherCell.xib in Resources */,
 				DF29E8501FD8938800C581B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +175,7 @@
 			files = (
 				DF29E84B1FD8938800C581B4 /* WheatherVC.swift in Sources */,
 				DF29E8491FD8938800C581B4 /* AppDelegate.swift in Sources */,
+				DFC6540D1FD9ECC800282BE4 /* WheatherCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

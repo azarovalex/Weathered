@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13770" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13770"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ouu-cf-Z4t">
+                    <rect key="frame" x="86" y="4" width="33" height="23"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="100°" id="Fsn-mn-ezB">
+                        <font key="font" size="13" name="AvenirNext-DemiBold"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99019607840000001" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c2r-sz-gSz">
+                    <rect key="frame" x="33" y="102" width="59" height="23"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Thursday" id="0cu-lq-VTq">
+                        <font key="font" size="13" name="AvenirNext-DemiBold"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99019607840000001" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y6k-pH-dLV">
+                    <rect key="frame" x="30" y="30" width="65" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="JZo-dB-EY9"/>
+                        <constraint firstAttribute="height" constant="65" id="bxq-Vl-qbh"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Clear" id="G0j-Ge-aPS"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2wX-Kj-Bln">
+                    <rect key="frame" x="6" y="4" width="33" height="23"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="100°" id="qHf-n2-VrA">
+                        <font key="font" size="13" name="AvenirNext-DemiBold"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99019607840000001" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ouu-cf-Z4t" secondAttribute="bottom" constant="4" id="8f6-av-eqI"/>
+                <constraint firstItem="y6k-pH-dLV" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="Dma-o4-5FC"/>
+                <constraint firstAttribute="bottom" secondItem="2wX-Kj-Bln" secondAttribute="bottom" constant="4" id="Nl8-RN-L96"/>
+                <constraint firstItem="c2r-sz-gSz" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="XFh-XI-Jo4"/>
+                <constraint firstItem="2wX-Kj-Bln" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="8" id="odC-yZ-fzY"/>
+                <constraint firstAttribute="trailing" secondItem="Ouu-cf-Z4t" secondAttribute="trailing" constant="8" id="xik-eZ-N1o"/>
+                <constraint firstItem="c2r-sz-gSz" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="yfN-cJ-Wr3"/>
+                <constraint firstItem="y6k-pH-dLV" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="zJi-U9-fv6"/>
+            </constraints>
+        </customView>
+        <collectionViewItem id="SCX-Ar-WLk" customClass="WheatherCell" customModule="Wheathered" customModuleProvider="target">
+            <connections>
+                <outlet property="cellDate" destination="c2r-sz-gSz" id="QCM-fH-iDJ"/>
+                <outlet property="highTemp" destination="Ouu-cf-Z4t" id="vAk-z8-de5"/>
+                <outlet property="lowTemp" destination="Ouu-cf-Z4t" id="S35-Fd-W5S"/>
+                <outlet property="view" destination="c22-O7-iKe" id="hMs-H2-sLK"/>
+                <outlet property="wheatherImage" destination="y6k-pH-dLV" id="c2A-Ys-TeF"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+    <resources>
+        <image name="Clear" width="107" height="107"/>
+    </resources>
+</document>
