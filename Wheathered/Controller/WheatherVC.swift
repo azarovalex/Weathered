@@ -25,11 +25,19 @@ class WheatherVC: NSViewController {
     }
 
     override func viewDidAppear() {
-        // self.view.layer?.backgroundColor = CGColor(red: 0.29, green: 0.72, blue: 0.98, alpha: 1.00)
+        UpdateUI()
     }
     
     func UpdateUI () {
         let wheather = WheatherService.instance.currentWheather
+        dateLbl.stringValue = wheather.date
+        tempLbl.stringValue = String(wheather.currentTemp) + "°"
+        locationLbl.stringValue = wheather.cityName
+        wheatherConditionLbl.stringValue = wheather.wheatherType
+        wheatherImage.image = NSImage(named: wheather.wheatherType)
+        if wheatherImage.image == nil {
+            wheatherImage.image = NSImage(named: "Snow")
+        }
     }
 
 }

@@ -21,7 +21,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         WheatherService.instance.downloadWheatherDetails {
             self.statusitem.button?.title = "\(WheatherService.instance.currentWheather.currentTemp)°"
+            WheatherService.instance.downloadForecast {
+                
+            }
         }
+        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
