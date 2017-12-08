@@ -7,9 +7,10 @@
 //
 
 import Cocoa
+import CoreLocation
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
 
     // Variables
     let statusitem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
@@ -19,6 +20,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusitem.button?.title =  "--°"
         statusitem.action = #selector(AppDelegate.displayPopUp(_:))
         
+        let updateWeatherData = Timer.scheduledTimer(timeInterval: 60 * 15, target: self, selector: #selector(AppDelegate.dowloadWeatherData), userInfo: nil, repeats: true)
+        updateWeatherData.tolerance = 60
+        dowloadWeatherData()
+    }
+
+    func dowloadWeatherData() {
         WeatherService.instance.downloadWeatherDetails {
             self.statusitem.button?.title = "\(WeatherService.instance.currentWeather.currentTemp)°"
             WeatherService.instance.downloadForecast {
@@ -26,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
-
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
