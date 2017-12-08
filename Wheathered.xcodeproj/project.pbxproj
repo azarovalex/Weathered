@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CB13623E5C2BFADC59FE482 /* Pods_Wheathered.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14965684C101B0338F3FF742 /* Pods_Wheathered.framework */; };
+		DF0E73C71FDA12D80099079F /* WheatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E73C61FDA12D80099079F /* WheatherService.swift */; };
 		DF29E8491FD8938800C581B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29E8481FD8938800C581B4 /* AppDelegate.swift */; };
 		DF29E84B1FD8938800C581B4 /* WheatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29E84A1FD8938800C581B4 /* WheatherVC.swift */; };
 		DF29E84D1FD8938800C581B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF29E84C1FD8938800C581B4 /* Assets.xcassets */; };
 		DF29E8501FD8938800C581B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF29E84E1FD8938800C581B4 /* Main.storyboard */; };
 		DFC6540B1FD9EC8100282BE4 /* WheatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC6540A1FD9EC8100282BE4 /* WheatherCell.xib */; };
 		DFC6540D1FD9ECC800282BE4 /* WheatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6540C1FD9ECC800282BE4 /* WheatherCell.swift */; };
+		DFC654121FDA0ADA00282BE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC654111FDA0ADA00282BE4 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14965684C101B0338F3FF742 /* Pods_Wheathered.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wheathered.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		200838011FBE5143802B55D4 /* Pods-Wheathered.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wheathered.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wheathered/Pods-Wheathered.debug.xcconfig"; sourceTree = "<group>"; };
+		B9D51D8BA27BEC5D0C363CFC /* Pods-Wheathered.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wheathered.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wheathered/Pods-Wheathered.release.xcconfig"; sourceTree = "<group>"; };
+		DF0E73C61FDA12D80099079F /* WheatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherService.swift; sourceTree = "<group>"; };
 		DF29E8451FD8938800C581B4 /* Wheathered.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wheathered.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF29E8481FD8938800C581B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF29E84A1FD8938800C581B4 /* WheatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherVC.swift; sourceTree = "<group>"; };
@@ -25,6 +32,7 @@
 		DF29E8521FD8938800C581B4 /* Wheathered.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wheathered.entitlements; sourceTree = "<group>"; };
 		DFC6540A1FD9EC8100282BE4 /* WheatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WheatherCell.xib; sourceTree = "<group>"; };
 		DFC6540C1FD9ECC800282BE4 /* WheatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherCell.swift; sourceTree = "<group>"; };
+		DFC654111FDA0ADA00282BE4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +40,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB13623E5C2BFADC59FE482 /* Pods_Wheathered.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D3EDE84F124D39584BE36A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				200838011FBE5143802B55D4 /* Pods-Wheathered.debug.xcconfig */,
+				B9D51D8BA27BEC5D0C363CFC /* Pods-Wheathered.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		86B18EA574127033AE782D63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14965684C101B0338F3FF742 /* Pods_Wheathered.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF0E73C51FDA12C10099079F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DF0E73C61FDA12D80099079F /* WheatherService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		DF29E83C1FD8938800C581B4 = {
 			isa = PBXGroup;
 			children = (
 				DF29E8471FD8938800C581B4 /* Wheathered */,
 				DF29E8461FD8938800C581B4 /* Products */,
+				3D3EDE84F124D39584BE36A1 /* Pods */,
+				86B18EA574127033AE782D63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +93,8 @@
 		DF29E8471FD8938800C581B4 /* Wheathered */ = {
 			isa = PBXGroup;
 			children = (
+				DF0E73C51FDA12C10099079F /* Services */,
+				DFC654101FDA0ABE00282BE4 /* Utilities */,
 				DFC654061FD9EBFD00282BE4 /* Model */,
 				DFC654071FD9EC0900282BE4 /* View */,
 				DFC654081FD9EC1800282BE4 /* Controller */,
@@ -101,6 +139,14 @@
 			path = Xibs;
 			sourceTree = "<group>";
 		};
+		DFC654101FDA0ABE00282BE4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DFC654111FDA0ADA00282BE4 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,9 +154,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF29E8551FD8938800C581B4 /* Build configuration list for PBXNativeTarget "Wheathered" */;
 			buildPhases = (
+				DFCE56FA62ACB1E59A92AC1C /* [CP] Check Pods Manifest.lock */,
 				DF29E8411FD8938800C581B4 /* Sources */,
 				DF29E8421FD8938800C581B4 /* Frameworks */,
 				DF29E8431FD8938800C581B4 /* Resources */,
+				750F25925CF93F048C955BD9 /* [CP] Embed Pods Frameworks */,
+				E68DB53223ED42F2EE854F7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,14 +217,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		750F25925CF93F048C955BD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Wheathered/Pods-Wheathered-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wheathered/Pods-Wheathered-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFCE56FA62ACB1E59A92AC1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wheathered-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E68DB53223ED42F2EE854F7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wheathered/Pods-Wheathered-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DF29E8411FD8938800C581B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0E73C71FDA12D80099079F /* WheatherService.swift in Sources */,
 				DF29E84B1FD8938800C581B4 /* WheatherVC.swift in Sources */,
 				DF29E8491FD8938800C581B4 /* AppDelegate.swift in Sources */,
 				DFC6540D1FD9ECC800282BE4 /* WheatherCell.swift in Sources */,
+				DFC654121FDA0ADA00282BE4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,9 +408,11 @@
 		};
 		DF29E8561FD8938800C581B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 200838011FBE5143802B55D4 /* Pods-Wheathered.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Wheathered/Wheathered.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
@@ -311,15 +420,18 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.Wheathered;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		DF29E8571FD8938800C581B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9D51D8BA27BEC5D0C363CFC /* Pods-Wheathered.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Wheathered/Wheathered.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
@@ -327,6 +439,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.Wheathered;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -1,0 +1,6 @@
+framework module Pods_Wheathered {
+  umbrella header "Pods-Wheathered-umbrella.h"
+
+  export *
+  module * { export * }
+}
