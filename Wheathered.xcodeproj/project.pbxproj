@@ -13,6 +13,7 @@
 		DF29E84B1FD8938800C581B4 /* WheatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29E84A1FD8938800C581B4 /* WheatherVC.swift */; };
 		DF29E84D1FD8938800C581B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF29E84C1FD8938800C581B4 /* Assets.xcassets */; };
 		DF29E8501FD8938800C581B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF29E84E1FD8938800C581B4 /* Main.storyboard */; };
+		DF97C02E1FDA8C71006A4A30 /* CurrentWheather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97C02D1FDA8C71006A4A30 /* CurrentWheather.swift */; };
 		DFC6540B1FD9EC8100282BE4 /* WheatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC6540A1FD9EC8100282BE4 /* WheatherCell.xib */; };
 		DFC6540D1FD9ECC800282BE4 /* WheatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6540C1FD9ECC800282BE4 /* WheatherCell.swift */; };
 		DFC654121FDA0ADA00282BE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC654111FDA0ADA00282BE4 /* Constants.swift */; };
@@ -30,6 +31,7 @@
 		DF29E84F1FD8938800C581B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF29E8511FD8938800C581B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF29E8521FD8938800C581B4 /* Wheathered.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wheathered.entitlements; sourceTree = "<group>"; };
+		DF97C02D1FDA8C71006A4A30 /* CurrentWheather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWheather.swift; sourceTree = "<group>"; };
 		DFC6540A1FD9EC8100282BE4 /* WheatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WheatherCell.xib; sourceTree = "<group>"; };
 		DFC6540C1FD9ECC800282BE4 /* WheatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherCell.swift; sourceTree = "<group>"; };
 		DFC654111FDA0ADA00282BE4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		DFC654061FD9EBFD00282BE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DF97C02D1FDA8C71006A4A30 /* CurrentWheather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				DF29E8491FD8938800C581B4 /* AppDelegate.swift in Sources */,
 				DFC6540D1FD9ECC800282BE4 /* WheatherCell.swift in Sources */,
 				DFC654121FDA0ADA00282BE4 /* Constants.swift in Sources */,
+				DF97C02E1FDA8C71006A4A30 /* CurrentWheather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

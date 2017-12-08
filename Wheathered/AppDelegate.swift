@@ -18,7 +18,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         statusitem.button?.title =  "--°"
         statusitem.action = #selector(AppDelegate.displayPopUp(_:))
-        WheatherService.instance.downloadWheatherDetails()
+        
+        WheatherService.instance.downloadWheatherDetails {
+            self.statusitem.button?.title = "\(WheatherService.instance.currentWheather.currentTemp)°"
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

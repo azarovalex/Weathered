@@ -11,11 +11,22 @@ import Alamofire
 
 class WheatherService {
     static let instance = WheatherService()
+    fileprivate var _currentWheather = CurrentWheather()
     
-    func downloadWheatherDetails() {
+    var currentWheather: CurrentWheather {
+        get {
+            return _currentWheather
+        }
+        set {
+            _currentWheather = newValue
+        }
+    }
+    
+    func downloadWheatherDetails(comlpete: @escaping DownloadComlete) {
         let url = URL(string: API_URL_CURRENT_WEATHER)
-        Alamofire.request(url!).responseJSON { (response) in
-            print(response.result.value ?? "")
+        Alamofire.request(url!).responseData { (response) in
+            self.currentWheather = CurrentWheather.loadCurrentWheatherFromData(response.data!)
+            comlpete()
         }
     }
 }
