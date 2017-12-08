@@ -27,9 +27,19 @@ class weatherVC: NSViewController {
     }
 
     override func viewDidAppear() {
+        NotificationCenter.default.addObserver(self, selector: #selector (WeatherVC.dataDownloadedNotif(_:)), name: NOTIF_DOWN_COMPL, object: nil)
         UpdateUI()
         // quitBtn.styleButtonText(button: quitBtn, buttonName: "Quit", fontColor: .darkGray, alignment: .center, font: "Avenir Next", size: 11)
         // poweredBybtn.styleButtonText(button: poweredBybtn, buttonName: "Powered by OpenWeatherMap", fontColor: .darkGray, alignment: .center, font: "Avenir NExt", size: 11)
+    }
+    
+    override func viewDidDisappear() {
+        NotificationCenter.default.removeObserver(self, name: NOTIF_DOWN_COMPL, object: nil)
+    }
+    
+    func dataDowloadedNotif(_ notif: Notification) {
+        UpdateUI()
+        print("hi")
     }
     
     @IBAction func poweredByBtnClicked(_ sender: Any) {
