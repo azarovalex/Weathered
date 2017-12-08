@@ -1,6 +1,6 @@
 //
 //  Forecast.swift
-//  Wheathered
+//  weathered
 //
 //  Created by Alex Azarov on 08/12/2017.
 //  Copyright © 2017 Alex Azarov. All rights reserved.
@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class Forecast {
     fileprivate var _date: String!
-    fileprivate var _wheatherType: String!
+    fileprivate var _weatherType: String!
     fileprivate var _highTemp: Int!
     fileprivate var _lowTemp: Int!
     
@@ -23,11 +23,11 @@ class Forecast {
         }
     }
     
-    var wheatherType: String {
+    var weatherType: String {
         get {
-            return _wheatherType
+            return _weatherType
         } set {
-            _wheatherType = newValue
+            _weatherType = newValue
         }
     }
     
@@ -57,7 +57,7 @@ class Forecast {
                 let dayForecast = Forecast()
                 dayForecast.highTemp = day["temp"]["max"].intValue
                 dayForecast.lowTemp = day["temp"]["min"].intValue
-                dayForecast.wheatherType = day["wheather"][0]["name"].stringValue
+                dayForecast.weatherType = day["weather"][0]["name"].stringValue
                 
                 let date = day["dt"].doubleValue
                 let unixConvertedDate = Date(timeIntervalSince1970: date)

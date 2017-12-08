@@ -1,6 +1,6 @@
 //
-//  CurrentWheather.swift
-//  Wheathered
+//  CurrentWeather.swift
+//  Weathered
 //
 //  Created by Alex Azarov on 08/12/2017.
 //  Copyright © 2017 Alex Azarov. All rights reserved.
@@ -9,10 +9,10 @@
 import Foundation
 import SwiftyJSON
 
-class CurrentWheather {
+class CurrentWeather {
     fileprivate var _cityName: String!
     fileprivate var _date: String!
-    fileprivate var _wheatherType: String!
+    fileprivate var _weatherType: String!
     fileprivate var _currentTemp: Int!
     
     var cityName: String {
@@ -33,12 +33,12 @@ class CurrentWheather {
         }
     }
     
-    var wheatherType: String {
+    var weatherType: String {
         get {
-            return _wheatherType
+            return _weatherType
         }
         set {
-            _wheatherType = newValue
+            _weatherType = newValue
         }
     }
     
@@ -51,23 +51,23 @@ class CurrentWheather {
         }
     }
     
-    class func loadCurrentWheatherFromData(_ APIData: Data) -> CurrentWheather {
+    class func loadCurrentWeatherFromData(_ APIData: Data) -> CurrentWeather {
         
-        let currentWheather = CurrentWheather()
+        let currentweather = CurrentWeather()
         let swiftyJSON = try! JSON(data: APIData)
         
-        currentWheather.cityName = swiftyJSON["name"].stringValue.capitalized
-        currentWheather.wheatherType = swiftyJSON["wheather"][0]["main"].stringValue.capitalized
-        currentWheather.currentTemp = swiftyJSON["main"]["temp"].intValue
+        currentweather.cityName = swiftyJSON["name"].stringValue.capitalized
+        currentweather.weatherType = swiftyJSON["weather"][0]["main"].stringValue.capitalized
+        currentweather.currentTemp = swiftyJSON["main"]["temp"].intValue
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .none
         let currentDate = dateFormatter.string(from: Date())
-        currentWheather.date = "Today, " + currentDate
+        currentweather.date = "Today, " + currentDate
         
         
-        return currentWheather
+        return currentweather
     }
     
     

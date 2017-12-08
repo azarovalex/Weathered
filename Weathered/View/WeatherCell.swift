@@ -1,6 +1,6 @@
 //
-//  WheatherCell.swift
-//  Wheathered
+//  weatherCell.swift
+//  weathered
 //
 //  Created by Alex Azarov on 08/12/2017.
 //  Copyright © 2017 Alex Azarov. All rights reserved.
@@ -8,9 +8,9 @@
 
 import Cocoa
 
-class WheatherCell: NSCollectionViewItem {
+class weatherCell: NSCollectionViewItem {
     
-    @IBOutlet weak var wheatherImage: NSImageView!
+    @IBOutlet weak var weatherImage: NSImageView!
     @IBOutlet weak var lowTemp: NSTextField!
     @IBOutlet weak var highTemp: NSTextField!
     @IBOutlet weak var cellDate: NSTextField!

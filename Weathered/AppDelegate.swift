@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Wheathered
+//  weathered
 //
 //  Created by Alex Azarov on 07/12/2017.
 //  Copyright © 2017 Alex Azarov. All rights reserved.
@@ -19,9 +19,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusitem.button?.title =  "--°"
         statusitem.action = #selector(AppDelegate.displayPopUp(_:))
         
-        WheatherService.instance.downloadWheatherDetails {
-            self.statusitem.button?.title = "\(WheatherService.instance.currentWheather.currentTemp)°"
-            WheatherService.instance.downloadForecast {
+        WeatherService.instance.downloadWeatherDetails {
+            self.statusitem.button?.title = "\(WeatherService.instance.currentWeather.currentTemp)°"
+            WeatherService.instance.downloadForecast {
                 
             }
         }
@@ -35,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func displayPopUp(_ sender: AnyObject?) {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateController(withIdentifier: "WheatherVC") as? NSViewController else { return }
+        guard let vc = storyboard.instantiateController(withIdentifier: "weatherVC") as? NSViewController else { return }
         let popoverView = NSPopover()
         popoverView.contentViewController = vc
         popoverView.behavior = .transient

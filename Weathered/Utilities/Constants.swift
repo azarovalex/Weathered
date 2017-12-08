@@ -1,6 +1,6 @@
 //
 //  Constants.swift
-//  Wheathered
+//  weathered
 //
 //  Created by Alex Azarov on 08/12/2017.
 //  Copyright © 2017 Alex Azarov. All rights reserved.

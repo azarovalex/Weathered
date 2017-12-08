@@ -56,13 +56,13 @@
                 <constraint firstItem="y6k-pH-dLV" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="zJi-U9-fv6"/>
             </constraints>
         </customView>
-        <collectionViewItem id="SCX-Ar-WLk" customClass="WheatherCell" customModule="Wheathered" customModuleProvider="target">
+        <collectionViewItem id="SCX-Ar-WLk" customClass="weatherCell" customModule="Wheathered" customModuleProvider="target">
             <connections>
                 <outlet property="cellDate" destination="c2r-sz-gSz" id="QCM-fH-iDJ"/>
                 <outlet property="highTemp" destination="Ouu-cf-Z4t" id="vAk-z8-de5"/>
                 <outlet property="lowTemp" destination="Ouu-cf-Z4t" id="S35-Fd-W5S"/>
                 <outlet property="view" destination="c22-O7-iKe" id="hMs-H2-sLK"/>
-                <outlet property="wheatherImage" destination="y6k-pH-dLV" id="c2A-Ys-TeF"/>
+                <outlet property="weatherImage" destination="y6k-pH-dLV" id="c2A-Ys-TeF"/>
             </connections>
         </collectionViewItem>
     </objects>

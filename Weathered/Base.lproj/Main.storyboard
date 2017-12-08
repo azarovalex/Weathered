@@ -675,7 +675,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Wheathered" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Weathered" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -702,10 +702,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--WheatherVC-->
+        <!--WeatherVC-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="WheatherVC" id="XfG-lQ-9wD" customClass="WheatherVC" customModule="Wheathered" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="weatherVC" id="XfG-lQ-9wD" customClass="weatherVC" customModule="Weathered" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -795,7 +795,7 @@
                                 <rect key="frame" x="20" y="29" width="360" height="160"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="nFN-KZ-ge0">
                                     <rect key="frame" x="0.0" y="0.0" width="360" height="160"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView id="hdj-O9-E6n">
                                             <rect key="frame" x="0.0" y="0.0" width="360" height="160"/>
@@ -836,8 +836,8 @@
                         <outlet property="dateLbl" destination="KDb-KM-daF" id="NNE-zS-Ne0"/>
                         <outlet property="locationLbl" destination="cXu-GG-v5y" id="uwP-Wh-zyf"/>
                         <outlet property="tempLbl" destination="XxW-4S-RfP" id="kTt-91-y5w"/>
-                        <outlet property="wheatherConditionLbl" destination="Sox-3M-3N0" id="BwF-2C-ihO"/>
-                        <outlet property="wheatherImage" destination="904-Hy-vBp" id="yY4-Gm-Y6T"/>
+                        <outlet property="weatherConditionLbl" destination="Sox-3M-3N0" id="BwF-2C-ihO"/>
+                        <outlet property="weatherImage" destination="904-Hy-vBp" id="yY4-Gm-Y6T"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

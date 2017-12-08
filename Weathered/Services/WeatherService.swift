@@ -1,6 +1,6 @@
 //
-//  WheatherService.swift
-//  Wheathered
+//  WeatherService.swift
+//  Weathered
 //
 //  Created by Alex Azarov on 08/12/2017.
 //  Copyright © 2017 Alex Azarov. All rights reserved.
@@ -9,17 +9,17 @@
 import Foundation
 import Alamofire
 
-class WheatherService {
-    static let instance = WheatherService()
-    fileprivate var _currentWheather = CurrentWheather()
+class WeatherService {
+    static let instance = WeatherService()
+    fileprivate var _currentWeather = CurrentWeather()
     fileprivate var _forecast = [Forecast]()
     
-    var currentWheather: CurrentWheather {
+    var currentWeather: CurrentWeather {
         get {
-            return _currentWheather
+            return _currentWeather
         }
         set {
-            _currentWheather = newValue
+            _currentWeather = newValue
         }
     }
     
@@ -31,10 +31,10 @@ class WheatherService {
         }
     }
     
-    func downloadWheatherDetails(comlpeted: @escaping DownloadComlete) {
+    func downloadWeatherDetails(comlpeted: @escaping DownloadComlete) {
         let url = URL(string: API_URL_CURRENT_WEATHER)
         Alamofire.request(url!).responseData { (response) in
-            self.currentWheather = CurrentWheather.loadCurrentWheatherFromData(response.data!)
+            self.currentWeather = CurrentWeather.loadCurrentWeatherFromData(response.data!)
             comlpeted()
         }
     }

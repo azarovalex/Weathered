@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8CB13623E5C2BFADC59FE482 /* Pods_Wheathered.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14965684C101B0338F3FF742 /* Pods_Wheathered.framework */; };
 		DF0E73C71FDA12D80099079F /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E73C61FDA12D80099079F /* WeatherService.swift */; };
 		DF29E8491FD8938800C581B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29E8481FD8938800C581B4 /* AppDelegate.swift */; };
 		DF29E84B1FD8938800C581B4 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29E84A1FD8938800C581B4 /* WeatherVC.swift */; };
@@ -19,12 +18,15 @@
 		DFC6540B1FD9EC8100282BE4 /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC6540A1FD9EC8100282BE4 /* WeatherCell.xib */; };
 		DFC6540D1FD9ECC800282BE4 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6540C1FD9ECC800282BE4 /* WeatherCell.swift */; };
 		DFC654121FDA0ADA00282BE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC654111FDA0ADA00282BE4 /* Constants.swift */; };
+		E68A972D0CFD0D42BD9AB407 /* Pods_Weathered.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CBD82ABBF2F5389F7A94DB /* Pods_Weathered.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14965684C101B0338F3FF742 /* Pods_Wheathered.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wheathered.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		200838011FBE5143802B55D4 /* Pods-Wheathered.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wheathered.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wheathered/Pods-Wheathered.debug.xcconfig"; sourceTree = "<group>"; };
+		97CBD82ABBF2F5389F7A94DB /* Pods_Weathered.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weathered.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D51D8BA27BEC5D0C363CFC /* Pods-Wheathered.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wheathered.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wheathered/Pods-Wheathered.release.xcconfig"; sourceTree = "<group>"; };
+		BACF7BD20CC4B3906C333F99 /* Pods-Weathered.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weathered.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weathered/Pods-Weathered.debug.xcconfig"; sourceTree = "<group>"; };
 		DF0E73C61FDA12D80099079F /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		DF29E8451FD8938800C581B4 /* Weathered.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weathered.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF29E8481FD8938800C581B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,13 +34,14 @@
 		DF29E84C1FD8938800C581B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF29E84F1FD8938800C581B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF29E8511FD8938800C581B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF29E8521FD8938800C581B4 /* Wheathered.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wheathered.entitlements; sourceTree = "<group>"; };
+		DF29E8521FD8938800C581B4 /* Weathered.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Weathered.entitlements; sourceTree = "<group>"; };
 		DF86879E1FDAE0D600B2BE0F /* NSDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
 		DF97C02D1FDA8C71006A4A30 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		DF97C02F1FDAD16A006A4A30 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		DFC6540A1FD9EC8100282BE4 /* WeatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
 		DFC6540C1FD9ECC800282BE4 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		DFC654111FDA0ADA00282BE4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F490A59F0AE6D7E1730849A4 /* Pods-Weathered.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weathered.release.xcconfig"; path = "Pods/Target Support Files/Pods-Weathered/Pods-Weathered.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CB13623E5C2BFADC59FE482 /* Pods_Wheathered.framework in Frameworks */,
+				E68A972D0CFD0D42BD9AB407 /* Pods_Weathered.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +61,8 @@
 			children = (
 				200838011FBE5143802B55D4 /* Pods-Wheathered.debug.xcconfig */,
 				B9D51D8BA27BEC5D0C363CFC /* Pods-Wheathered.release.xcconfig */,
+				BACF7BD20CC4B3906C333F99 /* Pods-Weathered.debug.xcconfig */,
+				F490A59F0AE6D7E1730849A4 /* Pods-Weathered.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -66,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				14965684C101B0338F3FF742 /* Pods_Wheathered.framework */,
+				97CBD82ABBF2F5389F7A94DB /* Pods_Weathered.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,7 +116,7 @@
 				DF29E84C1FD8938800C581B4 /* Assets.xcassets */,
 				DF29E84E1FD8938800C581B4 /* Main.storyboard */,
 				DF29E8511FD8938800C581B4 /* Info.plist */,
-				DF29E8521FD8938800C581B4 /* Wheathered.entitlements */,
+				DF29E8521FD8938800C581B4 /* Weathered.entitlements */,
 			);
 			path = Weathered;
 			sourceTree = "<group>";
@@ -247,7 +253,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Wheathered/Pods-Wheathered-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Weathered/Pods-Weathered-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -258,7 +264,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wheathered/Pods-Wheathered-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Weathered/Pods-Weathered-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DFCE56FA62ACB1E59A92AC1C /* [CP] Check Pods Manifest.lock */ = {
@@ -272,7 +278,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Wheathered-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Weathered-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -291,7 +297,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wheathered/Pods-Wheathered-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Weathered/Pods-Weathered-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -434,17 +440,17 @@
 		};
 		DF29E8561FD8938800C581B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 200838011FBE5143802B55D4 /* Pods-Wheathered.debug.xcconfig */;
+			baseConfigurationReference = BACF7BD20CC4B3906C333F99 /* Pods-Weathered.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Wheathered/Wheathered.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Weathered/Weathered.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
-				INFOPLIST_FILE = Wheathered/Info.plist;
+				INFOPLIST_FILE = Weathered/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.Wheathered;
+				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.Weathered;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -453,17 +459,17 @@
 		};
 		DF29E8571FD8938800C581B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9D51D8BA27BEC5D0C363CFC /* Pods-Wheathered.release.xcconfig */;
+			baseConfigurationReference = F490A59F0AE6D7E1730849A4 /* Pods-Weathered.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Wheathered/Wheathered.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Weathered/Weathered.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CLALR9F4Q5;
-				INFOPLIST_FILE = Wheathered/Info.plist;
+				INFOPLIST_FILE = Weathered/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.Wheathered;
+				PRODUCT_BUNDLE_IDENTIFIER = by.azarov.Weathered;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;

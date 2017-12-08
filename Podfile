@@ -2,9 +2,9 @@
 platform :macos, '10.12'
 use_frameworks!
 
-target 'Wheathered' do
+target 'Weathered' do
 
-  # Pods for Wheathered
+  # Pods for weathered
   pod 'Alamofire', '~> 4.5'
   pod 'SwiftyJSON'
 end

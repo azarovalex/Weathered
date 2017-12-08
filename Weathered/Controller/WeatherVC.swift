@@ -1,6 +1,6 @@
 //
-//  WheatherVC.swift
-//  Wheathered
+//  weatherVC.swift
+//  weathered
 //
 //  Created by Alex Azarov on 07/12/2017.
 //  Copyright © 2017 Alex Azarov. All rights reserved.
@@ -8,13 +8,13 @@
 
 import Cocoa
 
-class WheatherVC: NSViewController {
+class weatherVC: NSViewController {
     
     @IBOutlet weak var dateLbl: NSTextField!
     @IBOutlet weak var tempLbl: NSTextField!
     @IBOutlet weak var locationLbl: NSTextField!
-    @IBOutlet weak var wheatherImage: NSImageView!
-    @IBOutlet weak var wheatherConditionLbl: NSTextField!
+    @IBOutlet weak var weatherImage: NSImageView!
+    @IBOutlet weak var weatherConditionLbl: NSTextField!
     @IBOutlet weak var collectionView: NSCollectionView!
     
     override func viewDidLoad() {
@@ -29,22 +29,22 @@ class WheatherVC: NSViewController {
     }
     
     func UpdateUI () {
-        let wheather = WheatherService.instance.currentWheather
-        dateLbl.stringValue = wheather.date
-        tempLbl.stringValue = String(wheather.currentTemp) + "°"
-        locationLbl.stringValue = wheather.cityName
-        wheatherConditionLbl.stringValue = wheather.wheatherType
-        wheatherImage.image = NSImage(named: wheather.wheatherType)
-        if wheatherImage.image == nil {
-            wheatherImage.image = NSImage(named: "Snow")
+        let weather = WeatherService.instance.currentWeather
+        dateLbl.stringValue = weather.date
+        tempLbl.stringValue = String(weather.currentTemp) + "°"
+        locationLbl.stringValue = weather.cityName
+        weatherConditionLbl.stringValue = weather.weatherType
+        weatherImage.image = NSImage(named: weather.weatherType)
+        if weatherImage.image == nil {
+            weatherImage.image = NSImage(named: "Snow")
         }
     }
 
 }
 
-extension WheatherVC: NSCollectionViewDelegate, NSCollectionViewDataSource, NSCollectionViewDelegateFlowLayout {
+extension weatherVC: NSCollectionViewDelegate, NSCollectionViewDataSource, NSCollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        let forecastItem = collectionView.makeItem(withIdentifier: "WheatherCell", for: indexPath)
+        let forecastItem = collectionView.makeItem(withIdentifier: "WeatherCell", for: indexPath)
         return forecastItem
     }
     
