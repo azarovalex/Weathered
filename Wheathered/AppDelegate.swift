@@ -18,11 +18,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         statusitem.button?.title =  "--°"
         statusitem.action = #selector(AppDelegate.displayPopUp(_:))
+        WheatherService.instance.downloadWheatherDetails()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+    
 
     func displayPopUp(_ sender: AnyObject?) {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)

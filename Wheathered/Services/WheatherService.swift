@@ -7,9 +7,16 @@
 //
 
 import Foundation
-// import Alamofire
+import Alamofire
 
-//class WheatherService {
-//    static let instance = WheatherService()
-//}
+class WheatherService {
+    static let instance = WheatherService()
+    
+    func downloadWheatherDetails() {
+        let url = URL(string: API_URL_CURRENT_WEATHER)
+        Alamofire.request(url!).responseJSON { (response) in
+            print(response.result.value ?? "")
+        }
+    }
+}
 
