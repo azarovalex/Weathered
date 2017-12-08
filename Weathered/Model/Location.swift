@@ -11,8 +11,8 @@ import Foundation
 class Location {
     static var instance = Location()
     
-    fileprivate var _latitude: Double!
-    fileprivate var _longitude: Double!
+    fileprivate var _latitude: Double = 53.9
+    fileprivate var _longitude: Double = 27.56667
 
     var latitude: Double {
         get {

@@ -14,14 +14,28 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
 
     // Variables
     let statusitem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startMonitoringSignificantLocationChanges()
+        locationManager.distanceFilter = 1000
+        locationManager.startUpdatingLocation()
+
         statusitem.button?.title =  "--°"
         statusitem.action = #selector(AppDelegate.displayPopUp(_:))
-        
-        let updateWeatherData = Timer.scheduledTimer(timeInterval: 60 * 15, target: self, selector: #selector(AppDelegate.dowloadWeatherData), userInfo: nil, repeats: true)
+
+        let updateWeatherData = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(AppDelegate.dowloadWeatherData), userInfo: nil, repeats: true)
         updateWeatherData.tolerance = 60
+        dowloadWeatherData()
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currentLocation = locations[locations.count - 1]
+        Location.instance.latitude = currentLocation.coordinate.latitude
+        Location.instance.longitude = currentLocation.coordinate.longitude
         dowloadWeatherData()
     }
 
@@ -30,14 +44,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
             self.statusitem.button?.title = "\(WeatherService.instance.currentWeather.currentTemp)°"
             WeatherService.instance.downloadForecast {
                 NotificationCenter.default.post(name: NOTIF_DOWN_COMPL, object: nil)
+                self.locationManager.stopUpdatingLocation()
             }
         }
     }
-    
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-    
 
     func displayPopUp(_ sender: AnyObject?) {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
@@ -48,4 +58,5 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         popoverView.show(relativeTo: statusitem.button!.bounds, of: statusitem.button!, preferredEdge: .maxY)
     }
 }
+
 
