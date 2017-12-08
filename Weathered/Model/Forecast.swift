@@ -48,16 +48,16 @@ class Forecast {
     }
     
     class func loadForecastFromData(_ APIData: Data) -> [Forecast] {
+        
         var forecast = [Forecast]()
         let json = try! JSON(data: APIData)
         
         if let list = json["list"].array {
-            for index in 0..<8 {
-                var day = list[index]
+            for day in list {
                 let dayForecast = Forecast()
-                dayForecast.highTemp = day["temp"]["max"].intValue
-                dayForecast.lowTemp = day["temp"]["min"].intValue
-                dayForecast.weatherType = day["weather"][0]["name"].stringValue
+                dayForecast.highTemp = day["main"]["temp_max"].intValue
+                dayForecast.lowTemp = day["main"]["temp_min"].intValue
+                dayForecast.weatherType = day["weather"][0]["main"].stringValue
                 
                 let date = day["dt"].doubleValue
                 let unixConvertedDate = Date(timeIntervalSince1970: date)
