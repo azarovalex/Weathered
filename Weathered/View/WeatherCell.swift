@@ -22,4 +22,7 @@ class WheatherCell: NSCollectionViewItem {
         self.view.layer?.cornerRadius = 5
     }
     
+    func ConfigureCell(weatherCell: Forecast) {
+        
+    }
 }
