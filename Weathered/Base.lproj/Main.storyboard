@@ -707,11 +707,11 @@
             <objects>
                 <viewController storyboardIdentifier="weatherVC" id="XfG-lQ-9wD" customClass="weatherVC" customModule="Weathered" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="410"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="bottom" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNA-vW-Ydu">
-                                <rect key="frame" x="20" y="209" width="360" height="171"/>
+                                <rect key="frame" x="20" y="219" width="360" height="171"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LUl-hY-gyt">
                                         <rect key="frame" x="0.0" y="0.0" width="137" height="171"/>
@@ -792,7 +792,7 @@
                                 </customSpacing>
                             </stackView>
                             <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87h-A7-piT">
-                                <rect key="frame" x="20" y="29" width="360" height="160"/>
+                                <rect key="frame" x="20" y="39" width="360" height="160"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="nFN-KZ-ge0">
                                     <rect key="frame" x="0.0" y="0.0" width="360" height="160"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -821,13 +821,37 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yBg-HK-zec">
+                                <rect key="frame" x="2" y="3" width="224" height="32"/>
+                                <buttonCell key="cell" type="push" title="Powered by OpenWeatherMap" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eQ7-1X-mk4">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="poweredByBtnClicked:" target="XfG-lQ-9wD" id="q9g-P5-2aZ"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qro-9F-snh">
+                                <rect key="frame" x="332" y="3" width="66" height="32"/>
+                                <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TZ1-Ji-SXq">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quitBtnClicked:" target="XfG-lQ-9wD" id="Vkg-Uw-JDt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="87h-A7-piT" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="3mE-DD-TIu"/>
                             <constraint firstItem="BNA-vW-Ydu" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="B3D-T9-KIf"/>
                             <constraint firstItem="BNA-vW-Ydu" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="D7T-OA-nO2"/>
                             <constraint firstAttribute="trailing" secondItem="BNA-vW-Ydu" secondAttribute="trailing" constant="20" id="Egh-gJ-QCJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Qro-9F-snh" secondAttribute="bottom" constant="10" id="Sf2-Cq-sIV"/>
+                            <constraint firstAttribute="trailing" secondItem="Qro-9F-snh" secondAttribute="trailing" constant="8" id="Zls-4Q-diG"/>
                             <constraint firstItem="87h-A7-piT" firstAttribute="top" secondItem="BNA-vW-Ydu" secondAttribute="bottom" constant="20" id="aqT-QY-0cr"/>
+                            <constraint firstItem="yBg-HK-zec" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="bH1-e3-fTU"/>
+                            <constraint firstAttribute="bottom" secondItem="yBg-HK-zec" secondAttribute="bottom" constant="10" id="rmI-cs-tCE"/>
                             <constraint firstAttribute="trailing" secondItem="87h-A7-piT" secondAttribute="trailing" constant="20" id="yBs-qi-0fX"/>
                         </constraints>
                     </view>
@@ -835,6 +859,8 @@
                         <outlet property="collectionView" destination="hdj-O9-E6n" id="zvv-Cq-Q9D"/>
                         <outlet property="dateLbl" destination="KDb-KM-daF" id="NNE-zS-Ne0"/>
                         <outlet property="locationLbl" destination="cXu-GG-v5y" id="uwP-Wh-zyf"/>
+                        <outlet property="poweredBybtn" destination="yBg-HK-zec" id="QYz-TJ-l7p"/>
+                        <outlet property="quitBtn" destination="Qro-9F-snh" id="JuK-ir-1sI"/>
                         <outlet property="tempLbl" destination="XxW-4S-RfP" id="kTt-91-y5w"/>
                         <outlet property="weatherConditionLbl" destination="Sox-3M-3N0" id="BwF-2C-ihO"/>
                         <outlet property="weatherImage" destination="904-Hy-vBp" id="yY4-Gm-Y6T"/>

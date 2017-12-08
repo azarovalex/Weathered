@@ -48,7 +48,7 @@ class Forecast {
     }
     
     class func loadForecastFromData(_ APIData: Data) -> [Forecast] {
-        
+          
         var forecast = [Forecast]()
         let json = try! JSON(data: APIData)
         
